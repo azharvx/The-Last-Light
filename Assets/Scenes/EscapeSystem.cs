@@ -94,7 +94,6 @@ if (finalDoor != null && hasFinalKey && Vector3.Distance(transform.position, fin
     if (Input.GetKeyDown(KeyCode.E))
     {
         finalDoor.Find("Door").Rotate(0,90,0);
-    Time.timeScale = 0f;
 }
     }
     }
