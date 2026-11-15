@@ -78,6 +78,10 @@ public class NoiseManager : MonoBehaviour
             {
                 currentNoise += 40f * Time.deltaTime;
             }
+            else if (dist > 25f && isMoving)
+            {
+                currentNoise -= 12f * Time.deltaTime;
+            }
         }
 
         currentNoise = Mathf.Clamp(currentNoise, 0f, 100f);
