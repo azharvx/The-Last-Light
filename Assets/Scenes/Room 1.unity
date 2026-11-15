@@ -8884,7 +8884,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1621344227884394, guid: 272146bd2fed29d4fad8dc2101b84a4e, type: 3}
       propertyPath: m_Name
-      value: Door_10_Venge
+      value: Room5 Door
       objectReference: {fileID: 0}
     - target: {fileID: 4894436672217640, guid: 272146bd2fed29d4fad8dc2101b84a4e, type: 3}
       propertyPath: m_LocalScale.x
@@ -8934,11 +8934,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 114180901846431180, guid: 272146bd2fed29d4fad8dc2101b84a4e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 272146bd2fed29d4fad8dc2101b84a4e, type: 3}
+--- !u!4 &1363703994 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4894436672217640, guid: 272146bd2fed29d4fad8dc2101b84a4e, type: 3}
+  m_PrefabInstance: {fileID: 1363703993}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1380339575
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13641,7 +13647,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EscapeSystem
   finalKey: {fileID: 1947269755}
   finalDoor: {fileID: 1410892403}
-  winScreen: {fileID: 0}
   hasFinalKey: 0
   room4Respawn: {fileID: 1643797526}
   waterDeathHeight: 0
@@ -13652,6 +13657,9 @@ MonoBehaviour:
   planks: {fileID: 1437805562}
   door2: {fileID: 664951905}
   hasCrowbar: 0
+  room5Key: {fileID: 318576189}
+  room5Door: {fileID: 1363703994}
+  hasRoom5Key: 0
 --- !u!82 &2093495228
 AudioSource:
   m_ObjectHideFlags: 0

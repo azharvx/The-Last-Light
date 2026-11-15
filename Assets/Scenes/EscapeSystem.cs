@@ -4,7 +4,6 @@ public class EscapeSystem : MonoBehaviour
 {
     public Transform finalKey;
     public Transform finalDoor;
-    public GameObject winScreen;
     public bool hasFinalKey = false;
     public Transform room4Respawn;
     public float waterDeathHeight = -1.0f;
@@ -18,6 +17,9 @@ public class EscapeSystem : MonoBehaviour
     public Transform door2;
     public bool hasCrowbar = false;
     private bool door2Opened = false;
+    public Transform room5Key;
+    public Transform room5Door;
+    public bool hasRoom5Key = false;
 
     void Update()
     {
@@ -96,6 +98,21 @@ if (finalDoor != null && hasFinalKey && Vector3.Distance(transform.position, fin
         finalDoor.Find("Door").Rotate(0,90,0);
 }
     }
+    if (room5Key != null && !hasRoom5Key && Vector3.Distance(transform.position, room5Key.position) < 1.5f)
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            hasRoom5Key = true;
+            room5Key.gameObject.SetActive(false);
+        }
+    }
+    if (room5Door != null && hasRoom5Key && Vector3.Distance(transform.position, room5Door.position) < 4.0f)
+    {
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            room5Door.Find("Door").Rotate(0,90,0);
+            }
+        }
     }
 }
 
