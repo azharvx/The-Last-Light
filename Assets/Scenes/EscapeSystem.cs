@@ -111,6 +111,7 @@ if (finalDoor != null && hasFinalKey && Vector3.Distance(transform.position, fin
         if (Input.GetKeyDown(KeyCode.E))
         {
             room5Door.Find("Door").Rotate(0,90,0);
+            GetComponent<NoiseManager>().enabled = false;
             }
         }
     }
